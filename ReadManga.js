@@ -67,21 +67,15 @@ var ReadManga = {
 	},
 	getListImages : function (doc, curUrl2) {
 		var res = [];
-		var dir = "";
-		var scansstr = "";
-		$("script", doc).each(function (index) {
-			if ($(this).text().indexOf("var pictures = [{") != -1) {
-				var possc = $(this).text().indexOf("var pictures = [{") + 12;
-				var finsc = $(this).text().indexOf("]", possc);
-				scansstr = $(this).text().substring(possc, finsc);
-				var pos = scansstr.indexOf('"');
-				while (pos != -1) {
-					var end = scansstr.indexOf('"', pos + 1);
-					res[res.length] = scansstr.substring(pos + 1, end);
-					pos = scansstr.indexOf('"', end + 1);
-				}
-			}
-		});
+		var matches = doc.documentElement.innerHTML;
+		matches = matches.match(/rm_h\.init\(\[\[.*?\]\]/);
+		if (matches) {
+			matches = matches[0].slice(10);
+			b = eval(matches);
+			for (i = 0; i < b.length; i++) {
+				res[i] = b[i][1] + b[i][0] + b[i][2];
+			};
+		}
 		return res;
 	},
 	removeBanners : function (doc, curUrl) {
