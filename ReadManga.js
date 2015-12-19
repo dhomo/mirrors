@@ -88,8 +88,7 @@ var ReadManga = {
 		return $(".navAMR", doc);
 	},
 	isCurrentPageAChapterPage : function (doc, curUrl) {
-		// return ($("img#mangaPicture", doc).size() > 0);
-		return false;
+		return ($("img#mangaPicture", doc).size() > 0);
 	},
 	doSomethingBeforeWritingScans : function (doc, curUrl) {
 		$("#mangaBox", doc).prev().remove();
