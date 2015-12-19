@@ -13,11 +13,11 @@
     "objectName": "AdultManga",
     "mirrorName": "AdultManga",
     "jsFile": "AdultManga.js",
-    "webSites": ["http:\/\/mintmanga.ru\/*"],
+    "webSites": ["http:\/\/mintmanga.com\/*"],
     "revision": "2",
-    "developer": "polo",
+    "developer": "dhomo",
     "mirrorIcon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A\/wD\/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sFEQ0tAlKUUVYAAAKLSURBVDjLXZNLSJRRFMd\/9zEzftoo+JhMmaIvX1NRUGARLsuCcV1R1E7QRVAQLdu1bBGS0CKIHouKaNG6WkQxhRCClkSYUYRa0mOcvrGZ754W33yTdOHA5Z7z\/9\/z+B8FkMl0iFKglOL\/E7\/FfhFBBESExcVlpWKw1roWpGtQAVQdGJuI4JzDOUcYOjREYK01xhiOHttFW3sTiYQlmbQkkwlSqQS+38bZc0MMDW3FWlPH2Oh3hTEaaw3Dw31s2dzK5GQBpRRaR3bmzAHyI\/3kchmmpj7Xy9BxatYaEgnLwEAHY+OD+H4bnpfE81L4fjv5kX4AWloaMMZgjAZURBClr2ltbWTTpjQAY+ODNDQk8bwko6N7AQcI6XSqVkLUH72+SblcBoDp6SWOHNlGd3cznZ1NHDq8GaGKENLT04oxukag4hKiPuzZnUHKAVcnCrigyPjoDk6d6EOCVZ4\/fY8EJaQc1EZbI4gvSil6sx6uVGTsdA8P7s+yf6fHwX3NPLj3Bin\/pri8giv9otdvqWP0egH5nZYbt2bwNyaQtQquFFD8usqt+ws0qirv337DlUps8CLNANi4hM72FJm0cPfRR17PrHD5wnbkT8i1OwuUfodIpUpTo8WVA8Q5RCICHakLjuezPJv6xvefZV5NrzBxe57puZ88erpIpRKCsoABYHd\/M1JjsCJC39YNHM9nOXn+JWtrFUC4+fADj18sEgR\/sNbgnMPPRiOOpeycw6abEly\/NMjFKzPMvvtRXxaAD58qGKOpVjVz80Xm5osUSxWeFJapVkOcE9RAf1b27WrnSWFpHVgQkXqnY+UpBSIQho4wDHHOoQC6ujZKvL6xxtcTxKL5FxP5v3xZUn8BtXUSPUSq+8gAAAAASUVORK5CYII=",
-    "mirrorUrl": "http:\/\/mintmanga.ru\/"
+    "mirrorUrl": "http:\/\/mintmanga.com\/"
 }, {
     "id": "179",
     "objectName": "AkumaScan",
