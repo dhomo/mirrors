@@ -11,7 +11,7 @@
 }, {
     "id": "50",
     "objectName": "AdultManga",
-    "mirrorName": "AdultManga - MintManga",
+    "mirrorName": "AdultManga",
     "jsFile": "AdultManga.js",
     "webSites": ["http:\/\/adultmanga.ru\/*"],
     "revision": "1",
