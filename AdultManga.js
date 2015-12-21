@@ -24,7 +24,7 @@ var AdultManga = {
   
   //Return true if the url corresponds to the mirror
   isMe : function(url) {
-    return (url.indexOf("adultmanga.ru/") != -1);
+    return (url.indexOf("mintmanga.com/") != -1);
   },
   
   //Return the list of all or part of all mangas from the mirror
@@ -34,7 +34,7 @@ var AdultManga = {
   getMangaList : function(search, callback) {
      $.ajax(
         {
-          url: "http://adultmanga.ru/search",
+          url: "http://mintmanga.com/search",
           type: 'POST',
           data: {q: search},
           
@@ -50,7 +50,7 @@ var AdultManga = {
             $("#mangaResults td a:first-child", div).each(function(index) {
               var tit = $($(this).contents()[0]).text();
               titsp = tit.split("|");
-              res[res.length] = [titsp[0].trim(), "http://adultmanga.ru" + $(this).attr("href")];
+              res[res.length] = [titsp[0].trim(), "http://mintmanga.com" + $(this).attr("href")];
             });
             callback("AdultManga", res);
           }
@@ -83,7 +83,7 @@ var AdultManga = {
                     var str = $(this).attr("href");
 					str = str.split('/')[1];
 					if(str == mng_nm) {
-						res[res.length] = [$($(this).contents()[0]).text(), "http://adultmanga.ru" + $(this).attr("href")];
+						res[res.length] = [$($(this).contents()[0]).text(), "http://mintmanga.com" + $(this).attr("href")];
 					}
                  }
             );
@@ -101,9 +101,9 @@ var AdultManga = {
   getInformationsFromCurrentPage : function(doc, curUrl, callback) {
     //This function runs in the DOM of the current consulted page.
     var name = $($("#mangaBox h1 a:first-child", doc).contents()[0]).text();
-    var nameurl = "http://adultmanga.ru" + $("#mangaBox h1 a:first-child", doc).attr("href");
+    var nameurl = "http://mintmanga.com" + $("#mangaBox h1 a:first-child", doc).attr("href");
     var curChapName = $("#chapterSelectorSelect:first option:selected", doc).text();
-    var chapurl = "http://adultmanga.ru" + $("#chapterSelectorSelect:first option:selected", doc).val();
+    var chapurl = "http://mintmanga.com" + $("#chapterSelectorSelect:first option:selected", doc).val();
    
     callback({"name": name, 
             "currentChapter": curChapName, 
@@ -117,21 +117,15 @@ var AdultManga = {
   getListImages : function(doc, curUrl2) {
     //This function runs in the DOM of the current consulted page.
     var res = [];
-    var dir = "";
-    var scansstr = "";
-    $("script", doc).each(function(index) {
-      if ($(this).text().indexOf("var pictures = [{") != -1)  {
-        var possc = $(this).text().indexOf("var pictures = [{") + 12;
-        var finsc = $(this).text().indexOf("]", possc);
-        scansstr = $(this).text().substring(possc, finsc);
-        var pos = scansstr.indexOf("\"");
-        while (pos != -1) {
-          var end = scansstr.indexOf("\"", pos + 1);
-          res[res.length] = scansstr.substring(pos + 1, end);
-          pos = scansstr.indexOf("\"", end + 1);
-        }
-      }
-    });
+    var matches = doc.documentElement.innerHTML;
+    matches = matches.match(/rm_h\.init\(\[\[.*?\]\]/);
+    if (matches) {
+      matches = matches[0].slice(10);
+      b = eval(matches);
+      for (i = 0; i < b.length; i++) {
+        res[i] = b[i][1] + b[i][0] + b[i][2];
+      };
+    }
     return res;
   },
   
@@ -165,6 +159,9 @@ var AdultManga = {
   doSomethingBeforeWritingScans : function(doc, curUrl) {
     //This function runs in the DOM of the current consulted page.
     $("#mangaBox", doc).prev().remove();
+    $("#mangaBox", doc).prev().remove();
+    $(".second-nav", doc).append($("h1", doc));
+    $("h1", doc).css("text-align", "center");
     $("#mangaBox", doc).empty();
     $(".footerControl", doc).remove();
     $("#mangaBox", doc).css("width", "100%");
@@ -220,7 +217,7 @@ var AdultManga = {
   getMangaSelectFromPage : function(doc, curUrl) {
     //This function runs in the DOM of the current consulted page.
     $("#chapterSelectorSelect option", doc).each(function(index) {
-      $(this).val("http://adultmanga.ru" + $(this).val());
+      $(this).val("http://mintmanga.com" + $(this).val());
     });
     
     return $($("#chapterSelectorSelect", doc)[0]);

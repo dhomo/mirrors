@@ -92,6 +92,9 @@ var ReadManga = {
 	},
 	doSomethingBeforeWritingScans : function (doc, curUrl) {
 		$("#mangaBox", doc).prev().remove();
+		$("#mangaBox", doc).prev().remove();
+		$(".second-nav", doc).append($("h1", doc));
+		$("h1", doc).css("text-align", "center");
 		$("#mangaBox", doc).empty();
 		$(".footerControl", doc).remove();
 		$("#mangaBox", doc).css("width", "100%");
