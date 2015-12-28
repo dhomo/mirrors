@@ -68,7 +68,7 @@ var ReadManga = {
 	getListImages : function (doc, curUrl2) {
 		var res = [];
 		var matches = doc.documentElement.innerHTML;
-		matches = matches.match(/rm_h\.init\(\[\[.*?\]\]/);
+		matches = matches.match(/rm_h\.init\(.*?\]\]/);
 		if (matches) {
 			matches = matches[0].slice(10);
 			b = eval(matches);
