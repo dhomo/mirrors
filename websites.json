@@ -1,4 +1,14 @@
 [{
+    "id": "666",
+    "objectName": "Mangachan",
+    "mirrorName": "Mangachan",
+    "jsFile": "Mangachan.js",
+    "webSites": ["mangachan.ru\/*"],
+    "revision": "1",
+    "developer": "dhomo",
+    "mirrorIcon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABklBMVEX///+0z9ZsoK6MtMD1+Png6+5xo7FUkaGcv8m81No0fI9clqU+g5V/rbn8/f1blaVNjZ10pbI1fZDD2d6ArrlWkqL+/v6Zvccxeo7m7/Lh7O4rd4uyzdRYk6Nvo7BVkqKArrrX5ekze4+91Nu10Nc0fJDa5+uIsr4veY2tytLz9/hHiZqSucN9q7dTkKD6/Py/1tsqdopuoa9blqX3+vtDhpiDr7vw9ff1+fqjxMzo8PLK3eIsd4vC1939/v5toa95qbWdwMn0+Pm30deHsbzf6u1ZlKT+/v+709lLi5zM3uN1p7P2+fpAhJaBrrqnxs4lc4fT4+fW5Ogmc4iYvceNtsA4f5IueIxnnasfb4SUu8WewMogcIVhmajV5OgzfI+kxM1gmahjm6rm7/E5gJJfmKdlnKoteIs2fpFvorB3p7Slxs43fpE/g5X1+fns8/U5f5I9gZWOtsHx9vhimqmEsLxypLHd6exxpLHr8vRKi5zB192Js75BhZbj7e+609lKi5tJipusydH4+vuhw8yIs74y8n7hAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+ABBgoTJeXn100AAADoSURBVBjTZcjnIwIBAIbxx0hDrrPOGRlpIJwRIQ1b2XvmbNnJ3vv/dg6fPJ/e9wd/paVnZP5OQ5bRhNmSbc35+YJNzM3LLyiUiuRiHUpKy7CXV1RS5ajWwely47HU1FLnrdehoVGhqVlTWlq/v6+tHfxWUemgU+7SINAdDAUJR+jpdTv6NOj3+gYGh4bNoWhMMo7A6Ng4E5NTgjA9M8vcvB/nQoDFpWVYWY2zpq6zsSltbbt2YHcvYWDfjnjA4VHk+OQ06TlLnV/YMCUuo1fXavhGvk0l79R7lIfH+BPPL69vvH98xvjXF6fsKet3BOTZAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTAxLTA2VDEwOjE5OjM3KzAxOjAw3/unhwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wMS0wNlQxMDoxOTozNyswMTowMK6mHzsAAAAASUVORK5CYII=",
+    "mirrorUrl": "http:\/\/mangachan.ru\/"
+}, {
     "id": "218",
     "objectName": "ThHour",
     "mirrorName": "13Th Hour Scanlations",
