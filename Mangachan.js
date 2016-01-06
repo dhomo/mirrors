@@ -24,7 +24,7 @@ var Mangachan = {
 	
 	//Return true if the url corresponds to the mirror
 	isMe : function(url) {
-		return (url.indexOf("mangachan.ru/") != -1);
+		return (url.indexOf("mangachan.ru/") !== -1);
 	},
 	
 	//Return the list of all or part of all mangas from the mirror
@@ -35,7 +35,7 @@ var Mangachan = {
 		$.ajax({
 			//http://mangachan.ru/?do=search&subaction=search&story=Angel+Baby
 			url: "http://mangachan.ru/?do=search&subaction=search",
-			type: 'POST',
+			type: "POST",
 			data: {
 				story: search
 			},
@@ -51,7 +51,7 @@ var Mangachan = {
 					function (index, element) {
 						var chap = [];
 						chap[0] = $(element).text();
-						chap[1] = $(element).attr('href');;
+						chap[1] = $(element).attr("href");
 						res.push(chap);
 					}
 				);
@@ -84,7 +84,7 @@ var Mangachan = {
 							function (index, element) {
 								var chap = [];
 								chap[0] = $(element).text();
-								chap[1] = document.origin + $(element).attr('href');;
+								chap[1] = document.origin + $(element).attr("href");
 								res.push(chap);
 							}
 						);
@@ -106,7 +106,6 @@ var Mangachan = {
 		var curChapName = $(".volch:first", doc).text();
 
 		var mangaURL = "http://mangachan.ru" + $(".manga-title:first", doc).attr("href");
-		var chapurl = "http://mangachan.ru" + $("#chapterSelectorSelect:first option:selected", doc).val();
 	 
 		callback({"name": mangaName, 
 						"currentChapter": curChapName, 
@@ -125,9 +124,6 @@ var Mangachan = {
 		if (matches) {
 			matches = matches[0].slice(9);
 			res = eval(matches);
-			// for (i = 0; i < b.length; i++) {
-			// 	res[i] = b[i][1] + b[i][0] + b[i][2];
-			// };
 		}
 		return res;
 	},
@@ -203,7 +199,7 @@ var Mangachan = {
 	//If getListImages function returns the src of the image, just do $( image ).attr( "src", urlImg );
 	getImageFromPageAndWrite : function(urlImg, image, doc, curUrl) {
 		//This function runs in the DOM of the current consulted page.
-		$( image ).attr( "src", urlImg )
+		$( image ).attr( "src", urlImg );
 	},
 	
 	//If it is possible to know if an image is a credit page or something which 
@@ -231,9 +227,9 @@ var Mangachan = {
 		//This function runs in the DOM of the current consulted page.
 		// $("body > div:empty", doc).remove();
 	}
-}
+};
 
 // Call registerMangaObject to be known by includer
-if (typeof registerMangaObject == 'function') {
+if (typeof registerMangaObject == "function") {
 	registerMangaObject("Mangachan", Mangachan);
 }
