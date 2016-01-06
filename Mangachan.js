@@ -84,7 +84,7 @@ var Mangachan = {
 							function (index, element) {
 								var chap = [];
 								chap[0] = $(element).text();
-								chap[1] = "http://mintmanga.com" + $(element).attr("href");
+								chap[1] = "http://mangachan.ru" + $(element).attr("href");
 								res.push(chap);
 							}
 						);
