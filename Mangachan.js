@@ -135,7 +135,7 @@ var Mangachan = {
 	//Remove the banners from the current page
 	removeBanners : function(doc, curUrl) {
 		//This function runs in the DOM of the current consulted page.
-		// $(".baner", doc).remove();
+		$("#bottom", doc).remove();
 	},
 	
 	//This method returns the place to write the full chapter in the document
@@ -168,6 +168,7 @@ var Mangachan = {
 		$("#thumbs", doc).remove();
 		$("#loading", doc).remove();
 		$("#info_help", doc).remove();
+		$("script", doc).remove();
 		$("#image", doc).empty();
 
 		$("#image", doc).css("display", "");
