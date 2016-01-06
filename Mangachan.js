@@ -164,7 +164,6 @@ var Mangachan = {
 		$("#thumbs", doc).remove();
 		$("#loading", doc).remove();
 		$("#info_help", doc).remove();
-		$("script", doc).remove();
 		$("#image", doc).empty();
 
 		$("#image", doc).css("display", "");
