@@ -163,6 +163,12 @@ var Mangachan = {
 
 		$("#image", doc).before($("<div class='navAMR'></div>"));
 		$("#image", doc).after($("<div class='navAMR'></div>"));
+
+		if (typeof doc.createElement === "function") {
+			var script = doc.createElement("script");
+			script.innerText = "$(document).unbind('keydown');";
+			doc.body.appendChild(script);
+		}
 	},
 	
 	//This method is called to fill the next button's url in the manga site navigation bar
