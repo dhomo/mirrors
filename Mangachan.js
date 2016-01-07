@@ -75,19 +75,12 @@ var Mangachan = {
 
 			success: function (objResponse) {
 				var res = [];
-
-				$(".table_cha tbody", objResponse).each(
+				$(".table_cha .manga a", objResponse).each(
 					function (index, element) {
-						$(":first", element).remove();
-						$(":first", element).remove();
-						$(".manga a", element).each(
-							function (index, element) {
-								var chap = [];
-								chap[0] = $(element).text();
-								chap[1] = "http://mangachan.ru" + $(element).attr("href");
-								res.push(chap);
-							}
-						);
+						var chap = [];
+						chap[0] = $(element).text();
+						chap[1] = "http://mangachan.ru" + $(element).attr("href");
+						res.push(chap);
 					}
 				);
 				callback(res, obj);
