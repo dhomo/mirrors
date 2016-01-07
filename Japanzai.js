@@ -83,7 +83,7 @@ var Japanzai = {
                     sbraces1;
                 div.innerHTML = response;
                 txt = $("script", div).text();
-                rel = "var pages="
+                rel = "var pages ="
                 re1 = '.*?'; // Non-greedy match on filler
                 re2 = '[{^(]*((.*))[^)}]'; // Square Braces 1
                 p = new RegExp(rel + re1 + re2, ["i"]);
